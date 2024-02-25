@@ -1,0 +1,56 @@
+
+
+<div class="container mb-3 main_container">
+    <div class="row justify-content-center mb-3">
+      <div class="col-sm-12 col-md-8 col-lg-7">
+  
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Task Management - {{updateIsClicked ? 'Update' : 'Create'}}  </h5>
+          </div>
+          <div class="card-body">
+            <div class="row text-center">
+                <div class="col"><h2>{{updateIsClicked ? 'Update Task' : 'Create Task'}} </h2> </div>
+            </div>
+            
+            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+              <div class="form-group mb-3 text-left">
+                <label for="title">Title<span class="star">*</span> :</label>
+                <input type="text" class="form-control" id="title" formControlName="title" placeholder="Title">
+              </div>
+              <div class="form-group mb-3 text-left">
+                <label for="title">Description<span class="star">*</span> : </label>
+                <textarea type="text" class="form-control" id="title" formControlName="description" placeholder="Write here.."> </textarea>
+              </div>
+              <div class="form-group mb-3 text-left">
+                <label for="date">Date<span class="star">*</span> :</label>
+                <input type="date" class="form-control" id="date" formControlName="date">
+              </div>
+              <div class="form-group mb-3 text-left">
+                <label for="status">Status<span class="star">*</span> :</label>
+                <select class="form-control" id="status" formControlName="status"  > 
+                    <option *ngFor="let status of stylesheet" [value]="status"> {{status}}</option>
+                </select>
+              </div>
+            </form>
+        </div>
+            <div class="row text-center ">
+                <div class="col-sm ">
+                  <div *ngIf="updateIsClicked==false">
+                    <button type="submit" class="btn btn-primary mb-3" (click)="onSubmit()">Submit</button> 
+                  </div>
+                  <div *ngIf="updateIsClicked==true">
+                    <button type="submit" class="btn btn-primary mb-3" (click)="onUpdate()">Update</button> 
+
+                  </div>
+                  
+                  </div>
+            </div>
+        
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  

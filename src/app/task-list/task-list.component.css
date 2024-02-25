@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+
+mat-card {
+    margin: 2%;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+
+  .action-buttons{
+    display: flex;
+    gap: 2px;
+
+  }
+
+
+@media screen and (max-width: 1000px) {
+  
+.card_content {
+  overflow-x: scroll;
+}
+
+}
+
