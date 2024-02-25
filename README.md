@@ -1,12 +1,12 @@
-##  Task-Management
+###  Task-Management
 Welcome to the Angular Task Management App! This application allows users to manage tasks by adding, viewing, updating, and deleting tasks. It is built using Angular and implements various Angular features and best practices.
 
 # Features
 
 # User Interface:
-Task list : Display a list of tasks with options to mark tasks as completed or delete them.
-Create New task : Allow users to create a new task.
-Update task : Enable users to edit existing tasks.
+Task list: Display a list of tasks with options to mark tasks as completed or delete them.
+Create a New task: Allow users to create a new task.
+Update task: Enable users to edit existing tasks.
 
 # Task Management:
 
@@ -75,10 +75,10 @@ ng test
 While running the ng test, you may encounter an error like:
 
 * ' Error: NG0304: 'mat-card' is not a known element (used in the 'TaskListComponent' component template):
-1. If 'mat-card' is an Angular component, then verify that it is a part of an @NgModule where this component is declared.
+1. If 'mat-card' is an Angular component, then verify that it is part of an @NgModule where this component is declared.
 2. If 'mat-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. '
-This error is not caused by any fault in the developer's code. It is because the main developer of the Material UI library has not implemented it. You can verify this fact on GitHub here. They mention, "Unfortunately, this is an intentional issue, as part of the labs is to fix the tests."
-You can also check here :- https://github.com/nrwl/nx-workshop/issues/27
+This error is not caused by any fault in the developer's code. This is because the main developer of the Material UI library has not implemented it. You can verify this fact on GitHub here. They mention, "Unfortunately, this is an intentional issue, as part of the labs is to fix the tests."
+You can also check here:- https://github.com/nrwl/nx-workshop/issues/27
 
 However, the tests for the reactive form have been correctly implemented by the developer.
 
