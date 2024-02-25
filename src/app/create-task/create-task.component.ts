@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { TaskService } from '../task.service';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { Location } from '@angular/common';
 
 export interface FormData {
   id: number;
@@ -27,7 +27,7 @@ export class CreateTaskComponent implements OnInit {
   task!: FormData;
  updateIsClicked: boolean = false;
 
-  constructor(public taskService: TaskService, public router: Router, public routes: ActivatedRoute) { }
+  constructor(public taskService: TaskService, public router: Router, public routes: ActivatedRoute, public location: Location) { }
 
   async ngOnInit(): Promise<void> {
 
@@ -59,6 +59,9 @@ export class CreateTaskComponent implements OnInit {
 
   }
 
+  goBack(){
+    this.location.back();
+  }
   async generateRandom5DigitNumber() {
     const randomNumber = Math.floor(Math.random() * 90000) + 10000;
     return randomNumber;

@@ -24,3 +24,8 @@ label {
     color: red;
 }
 
+.card_header {
+ 
+    text-wrap: nowrap;
+  
+}
